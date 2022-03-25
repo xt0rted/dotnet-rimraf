@@ -7,6 +7,8 @@
 
 Deep deletion command for .NET (like rm -rf).
 
+This is based on the [node tool](https://github.com/isaacs/rimraf) of the same name.
+
 ## Installation
 
 This tool can be used as a dotnet global tool, or a dotnet local tool.
@@ -30,7 +32,7 @@ dotnet tool install rimraf
 Name | Description
 -- | --
 `--dry-run` | See what would be deleted (enables `--verbose`)
-`--no-preserve-root` | Do not treat `/` specially
+`--no-preserve-root` | Delete the directory being acted on instead of preserving it
 `--verbose` | Enable verbose output
 `--version` | Show version information
 `--help` | Show help and usage information
