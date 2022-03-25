@@ -3,6 +3,10 @@
     "version": "6.0.201"
   },
   "scripts": {
+    "clean": "dotnet rimraf artifacts .coverage",
+    "clean:bin": "dotnet rimraf **/bin **/obj",
+
+    "prebuild": "dotnet r clean",
     "build": "dotnet build",
     "test": "dotnet test --logger \"trx\" --results-directory \"./.coverage\"",
     "test:31": "dotnet r test -- --framework netcoreapp3.1",
