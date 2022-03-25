@@ -6,6 +6,7 @@ on:
 
 env:
   DOTNET_NOLOGO: true
+  CONFIGURATION: Release
 
 jobs:
   build:
@@ -46,11 +47,11 @@ jobs:
 
       - run: dotnet tool restore
 
-      - run: dotnet r build:release
+      - run: dotnet r build
 
-      - run: dotnet r test:release
+      - run: dotnet r test
 
-      - run: dotnet r pack:release
+      - run: dotnet r pack
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3.0.0
