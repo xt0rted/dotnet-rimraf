@@ -1,0 +1,80 @@
+name: Release
+
+on:
+  release:
+   types: [published]
+
+env:
+  DOTNET_NOLOGO: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - name: Get version from tag
+        id: tag_name
+        run: echo ::set-output name=current_version::${GITHUB_REF#refs/tags/v}
+        shell: bash
+
+      - name: Check out repository
+        uses: actions/checkout@v3.0.0
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v2.0.0
+        with:
+          dotnet-version: |
+            3.1.x
+            5.0.x
+
+      - name: Set up .NET (global.json)
+        uses: actions/setup-dotnet@v2.0.0
+        with:
+          source-url: https://nuget.pkg.github.com/xt0rted/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get changelog entry
+        uses: mindsers/changelog-reader-action@v2.0.0
+        id: changelog_reader
+        with:
+          version: ${{ steps.tag_name.outputs.current_version }}
+
+      - run: dotnet tool restore
+
+      - run: dotnet r build:release
+
+      - run: dotnet r test:release
+
+      - run: dotnet r pack:release
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3.0.0
+        with:
+          name: nupkg
+          path: ./artifacts/*.nupkg
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v3.0.0
+        if: always()
+        with:
+          name: test-results
+          path: ./.coverage/*.trx
+
+      - name: Upload release assets
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          body: ${{ steps.changelog_reader.outputs.changes }}
+          files: ./artifacts/*.nupkg
+
+      - name: Publish to GPR
+        run: |
+          dotnet nuget push "./artifacts/*.nupkg" \
+            --api-key ${{ secrets.GITHUB_TOKEN }} \
+            --source https://nuget.pkg.github.com/${{ github.repository_owner }}
