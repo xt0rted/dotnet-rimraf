@@ -56,3 +56,8 @@ rimraf **/bin **/obj
 ### Working directory
 
 The working directory is the directory that `rimraf` is run from.
+
+## Development
+
+This project uses the [run-script](https://github.com/xt0rted/dotnet-run-script) dotnet tool to manage its build and test scripts.
+To use this you'll need to run `dotnet tool install` and then `dotnet r` to see the available commands or look at the `scripts` section in the [global.json](global.json).
