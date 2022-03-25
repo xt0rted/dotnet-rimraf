@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [0.1.0](https://github.com/xt0rted/dotnet-rimraf/releases/tag/v0.1.0) - 2022-03-25
+
 - Cross platform (tested on macOS, Ubuntu, and Windows)
 - Won't return an error if the target path/glob doesn't exist
 - Can install as a local or global tool
