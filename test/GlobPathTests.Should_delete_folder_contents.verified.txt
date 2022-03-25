@@ -1,0 +1,3 @@
+[
+  {ProjectDirectory}GlobPathTests_/Should_delete_folder_contents/test
+]

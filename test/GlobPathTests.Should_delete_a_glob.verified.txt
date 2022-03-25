@@ -1,0 +1,17 @@
+[
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-1/d-2-1/d-1-1/f-1-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-1/d-2-1/d-1-2/f-1-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-1/d-2-1/f-2-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-1/d-2-2/d-1-1/f-1-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-1/d-2-2/d-1-2/f-1-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-1/d-2-2/f-2-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-1/f-3-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-2/d-2-1/d-1-1/f-1-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-2/d-2-1/d-1-2/f-1-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-2/d-2-1/f-2-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-2/d-2-2/d-1-1/f-1-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-2/d-2-2/d-1-2/f-1-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-2/d-2-2/f-2-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/d-3-2/f-3-1,
+  {ProjectDirectory}GlobPathTests_/Should_delete_a_glob/test/f-4-1
+]

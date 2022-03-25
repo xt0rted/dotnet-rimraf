@@ -1,0 +1,6 @@
+// We use 'FindFirstFileW' instead of 'FindFirstFileExW' because the latter doesn't work correctly with Unicode file names on FAT32.
+// See https://github.com/PowerShell/PowerShell/issues/16804
+FindFirstFile
+IO_REPARSE_TAG_APPEXECLINK
+FILE_FLAGS_AND_ATTRIBUTES
+IO_REPARSE_TAG_APPEXECLINK

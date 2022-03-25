@@ -1,0 +1,3 @@
+[*.cs]
+# CA2219: Do not raise exceptions in finally clauses
+dotnet_diagnostic.CA2219.severity = none

@@ -1,0 +1,33 @@
+is_global = true
+
+# Rules
+
+# IO0002: Replace File class with IFileSystem.File for improved testability
+dotnet_diagnostic.IO0002.severity = error
+
+# IO0003: Replace Directory class with IFileSystem.Directory for improved testability
+dotnet_diagnostic.IO0003.severity = error
+
+# IO0004: Replace FileInfo class with IFileSystem.FileInfo for improved testability
+dotnet_diagnostic.IO0004.severity = error
+
+# IO0005: Replace FileStream class with IFileSystem.FileStream for improved testability
+dotnet_diagnostic.IO0005.severity = error
+
+# IO0006: Replace Path class with IFileSystem.Path for improved testability
+dotnet_diagnostic.IO0006.severity = error
+
+# IO0007: Replace DirectoryInfo class with IFileSystem.DirectoryInfo for improved testability
+dotnet_diagnostic.IO0007.severity = error
+
+# IO0008: Replace StringWriter class with IFileSytem.StringWriter for improved testability
+dotnet_diagnostic.IO0008.severity = error
+
+# IO0009: Replace StringReader instance with IFileSystem.StringReader factory for improved testability
+dotnet_diagnostic.IO0009.severity = error
+
+# IO0010: Replace StreamWriter string constructor overload with stream based overload using a stream from IFileSystem.FileStream for improved testability
+dotnet_diagnostic.IO0010.severity = error
+
+# IO0011: Replace StreamReader string constructor overload with stream based overload using a stream from IFileSystem.FileStream for improved testability
+dotnet_diagnostic.IO0011.severity = error
