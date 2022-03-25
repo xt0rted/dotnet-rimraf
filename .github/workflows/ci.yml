@@ -20,9 +20,12 @@ jobs:
     strategy:
       matrix:
         os:
-          - macos-latest
-          - ubuntu-latest
-          - windows-latest
+          - macos-10.15
+          - macos-11
+          - ubuntu-18.04
+          - ubuntu-20.04
+          - windows-2019
+          - windows-2022
 
     permissions:
       contents: read
@@ -64,12 +67,19 @@ jobs:
 
       - run: dotnet r pack:release -- --version-suffix ${{ env.VERSION_SUFFIX }}
 
-      - name: Publish artifacts
+      - name: Upload artifacts
         uses: actions/upload-artifact@v3.0.0
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-20.04'
         with:
           name: nupkg
           path: ./artifacts/*.nupkg
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v3.0.0
+        if: always()
+        with:
+          name: test-results
+          path: ./.coverage/*.trx
 
   release:
     if: github.event_name == 'push'
