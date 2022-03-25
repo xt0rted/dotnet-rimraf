@@ -15,6 +15,7 @@
     <Description>Deep deletion command for .NET (like rm -rf)</Description>
     <Deterministic>true</Deterministic>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>See https://github.com/xt0rted/dotnet-rimraf/blob/main/CHANGELOG.md for more info</PackageReleaseNotes>
@@ -34,6 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="../assets/icon.png" Pack="true" PackagePath="\">
+      <LinkBase>assets</LinkBase>
+    </None>
     <None Include="../README.md" Pack="true" PackagePath="\">
       <LinkBase>assets</LinkBase>
     </None>
