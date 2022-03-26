@@ -1,4 +1,4 @@
-# dotnet-rimraf
+# <img src="assets/icon.svg" align="left" height="45"> dotnet-rimraf
 
 [![CI build status](https://github.com/xt0rted/dotnet-rimraf/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/xt0rted/dotnet-rimraf/actions/workflows/ci.yml)
 [![NuGet Package](https://img.shields.io/nuget/v/rimraf?logo=nuget)](https://www.nuget.org/packages/rimraf)
