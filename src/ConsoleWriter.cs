@@ -47,7 +47,8 @@ internal class ConsoleWriter : IConsoleWriter
 
     public void VerboseBanner()
         => LineVerbose("Verbose mode is on. This will print more information.");
-    public void BlankVerboseLine()
+
+    public void BlankLineVerbose()
         => WriteLine(Ansi.Color.Foreground.LightGray, verbose: true, null);
 
     public void Line(string? message, params object?[] args)

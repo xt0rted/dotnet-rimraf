@@ -4,7 +4,7 @@ internal interface IConsoleWriter
 {
     void VerboseBanner();
 
-    void BlankVerboseLine();
+    void BlankLineVerbose();
 
     void Line(string? message, params object?[] args);
 
