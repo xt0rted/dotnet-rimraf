@@ -57,9 +57,9 @@ internal class RimRafCommand : RootCommand, ICommandHandler
                 break;
             }
 
-            console.BlankVerboseLine();
+            console.BlankLineVerbose();
             console.InformationVerbose("Path: {0}", path);
-            console.BlankVerboseLine();
+            console.BlankLineVerbose();
 
             var glob = Glob.Parse(path);
 
