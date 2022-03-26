@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Fixed console color output check
+
 ## [0.1.0](https://github.com/xt0rted/dotnet-rimraf/releases/tag/v0.1.0) - 2022-03-25
 
 - Cross platform (tested on macOS, Ubuntu, and Windows)

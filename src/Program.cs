@@ -11,7 +11,7 @@ var workingDirectory = Environment.CurrentDirectory;
 
 using (var rootDirectory = new PhysicalFileProvider(workingDirectory, ExclusionFilters.None))
 {
-    var consoleFormatProvider = new ConsoleFormatInfo();
+     var consoleFormatProvider = ConsoleFormatInfo.CurrentInfo;
     var rootCommand = new RimRafCommand(rootDirectory, new FileSystem(), consoleFormatProvider);
     var parser = new CommandLineBuilder(rootCommand)
         .UseVersionOption()

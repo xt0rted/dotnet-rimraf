@@ -43,10 +43,9 @@ public sealed class GlobPathTestEnvironment : IDisposable
         // works, if it doesn't then I'm sorry for the extra files & folders that
         // will be left hanging around.
         var testPath = Path.Join(TestFolder, name);
-        var consoleFormatProvider = new ConsoleFormatInfo();
         var consoleWriter = new ConsoleWriter(
             new SystemConsole(),
-            consoleFormatProvider,
+            ConsoleFormatInfo.CurrentInfo,
             verbose: false);
         var fileSystem = new FileSystem();
         var glob = Glob.Parse("**/*");
