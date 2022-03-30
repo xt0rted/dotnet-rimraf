@@ -53,21 +53,25 @@ internal class ConsoleWriter : IConsoleWriter
 
     public void Line(string? message, params object?[] args)
         => WriteLine(Ansi.Color.Foreground.LightGray, verbose: false, message, args);
+
     public void LineVerbose(string? message = null, params object?[] args)
         => WriteLine(Ansi.Color.Foreground.LightGray, verbose: true, message, args);
 
     public void SecondaryLine(string? message, params object?[] args)
         => WriteLine(Ansi.Color.Foreground.DarkGray, verbose: false, message, args);
+
     public void SecondaryLineVerbose(string? message, params object?[] args)
         => WriteLine(Ansi.Color.Foreground.DarkGray, verbose: true, message, args);
 
     public void Information(string? message, params object?[] args)
         => WriteLine(Ansi.Color.Foreground.Cyan, verbose: false, message, args);
+
     public void InformationVerbose(string? message, params object?[] args)
         => WriteLine(Ansi.Color.Foreground.Cyan, verbose: true, message, args);
 
     public void Error(string? message, params object?[] args)
         => WriteLine(Ansi.Color.Foreground.Red, verbose: false, message, args);
+
     public void ErrorVerbose(string? message, params object?[] args)
         => WriteLine(Ansi.Color.Foreground.Red, verbose: true, message, args);
 }
