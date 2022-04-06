@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Fixed console color output check
+- Bumped `Emet.FileSystems` from 0.0.4 to 0.0.5
 
 ## [0.1.0](https://github.com/xt0rted/dotnet-rimraf/releases/tag/v0.1.0) - 2022-03-25
 
