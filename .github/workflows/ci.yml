@@ -47,18 +47,10 @@ jobs:
         shell: bash
 
       - name: Set up .NET
-        uses: actions/setup-dotnet@v2.0.0
-        with:
-          dotnet-version: |
-            3.1.x
-            5.0.x
-
-      - name: Set up .NET (global.json)
-        uses: actions/setup-dotnet@v2.0.0
+        uses: xt0rted/setup-dotnet@v1.0.0
         with:
           source-url: https://nuget.pkg.github.com/xt0rted/index.json
-        env:
-          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          nuget_auth_token: ${{ secrets.GITHUB_TOKEN }}
 
       - run: dotnet tool restore
 
