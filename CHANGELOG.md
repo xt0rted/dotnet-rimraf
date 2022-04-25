@@ -4,6 +4,7 @@
 
 - Fixed console color output check
 - Bumped `Emet.FileSystems` from 0.0.4 to 0.0.5
+- Bumped `System.IO.Abstractions` from 16.1.25 to 17.0.1
 - Switched from [actions/setup-dotnet](https://github.com/actions/setup-dotnet) to [xt0rted/setup-dotnet](https://github.com/xt0rted/setup-dotnet)
 
 ## [0.1.0](https://github.com/xt0rted/dotnet-rimraf/releases/tag/v0.1.0) - 2022-03-25
