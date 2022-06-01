@@ -1,5 +1,3 @@
-#pragma warning disable RCS1208
-
 namespace RimRaf;
 
 using System.ComponentModel;
