@@ -4,7 +4,7 @@
 
 - Fixed console color output check
 - Bumped `Emet.FileSystems` from 0.0.4 to 0.0.5
-- Bumped `System.IO.Abstractions` from 16.1.25 to 17.0.23
+- Bumped `System.IO.Abstractions` from 16.1.25 to 17.0.24
 - Switched from [actions/setup-dotnet](https://github.com/actions/setup-dotnet) to [xt0rted/setup-dotnet](https://github.com/xt0rted/setup-dotnet)
 - No longer built and tested on macOS 10.15 due to GitHub Actions [no longer supporting](https://github.com/actions/virtual-environments/issues/5583) that version
 
