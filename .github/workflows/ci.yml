@@ -26,6 +26,7 @@ jobs:
           - macos-12
           - ubuntu-18.04
           - ubuntu-20.04
+          - ubuntu-22.04
           - windows-2019
           - windows-2022
 
