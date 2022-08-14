@@ -1,7 +1,6 @@
 namespace RimRaf;
 
 using System.CommandLine.Invocation;
-using System.CommandLine.Rendering;
 
 using DotNet.Globbing;
 
@@ -31,6 +30,9 @@ internal class RimRafCommand : RootCommand, ICommandHandler
 
         Handler = this;
     }
+
+    public int Invoke(InvocationContext context)
+        => throw new NotImplementedException();
 
     public Task<int> InvokeAsync(InvocationContext context)
     {
