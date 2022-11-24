@@ -49,13 +49,13 @@ jobs:
         shell: bash
 
       - name: Set up .NET
-        uses: xt0rted/setup-dotnet@v1.4.0
+        uses: xt0rted/setup-dotnet@v1.5.0
         with:
           source-url: https://nuget.pkg.github.com/xt0rted/index.json
           nuget_auth_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up .NET
-        uses: xt0rted/setup-dotnet@v1.4.0
+        uses: xt0rted/setup-dotnet@v1.5.0
         if: matrix.os == 'ubuntu-22.04'
         with:
           colored-output: false
