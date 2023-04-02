@@ -2,7 +2,8 @@ name: Release
 
 on:
   release:
-   types: [published]
+    types:
+      - published
 
 env:
   DOTNET_NOLOGO: true
@@ -30,6 +31,10 @@ jobs:
         with:
           source-url: https://nuget.pkg.github.com/xt0rted/index.json
           nuget_auth_token: ${{ secrets.GITHUB_TOKEN }}
+          dotnet-version: |
+            3.1.x
+            5.0.x
+            6.0.x
 
       - name: Get changelog entry
         uses: mindsers/changelog-reader-action@v2.2.2
