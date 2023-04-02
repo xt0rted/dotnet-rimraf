@@ -2,9 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -53,16 +55,10 @@ jobs:
         with:
           source-url: https://nuget.pkg.github.com/xt0rted/index.json
           nuget_auth_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up .NET
-        uses: xt0rted/setup-dotnet@v1.5.0
-        if: matrix.os == 'ubuntu-22.04'
-        with:
-          colored-output: false
-          strip-comments-from-global-json: false
           dotnet-version: |
             3.1.x
             5.0.x
+            6.0.x
 
       - run: dotnet tool restore
 
