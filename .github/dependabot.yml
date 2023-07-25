@@ -11,11 +11,35 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 99
+    groups:
+      github-actions:
+        patterns:
+          - "actions/*"
+      my-actions:
+        patterns:
+          - "xt0rted/*"
 
   - package-ecosystem: "nuget"
     directory: "/"
     registries: "*"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 99
+    groups:
+      analyzers:
+        patterns:
+          - "IDisposableAnalyzers"
+          - "Roslynator.*"
+      system-io:
+        patterns:
+          - "System.IO.Abstractions"
+          - "System.IO.Abstractions.TestingHelpers"
+      testing:
+        patterns:
+          - "coverlet.collector"
+          - "FakeItEasy"
+          - "FakeItEasy.*"
+          - "Microsoft.NET.Test.Sdk"
+          - "Shouldly"
+          - "Verify.Xunit"
+          - "xunit"
+          - "xunit.*"
