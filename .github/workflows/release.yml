@@ -64,6 +64,16 @@ jobs:
           body: ${{ steps.changelog_reader.outputs.changes }}
           files: ./artifacts/*.nupkg
 
+      - name: Create discussion for release
+        run: |
+          gh api \
+            --method PATCH \
+            -H "Accept: application/vnd.github+json" \
+            /repos/${{ github.repository }}/releases/${{ steps.release_updater.outputs.id }} \
+            -f discussion_category_name='Announcements'
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+
       - name: Publish to GPR
         run: |
           dotnet nuget push "./artifacts/*.nupkg" \
