@@ -36,9 +36,9 @@ updates:
           - "System.IO.Abstractions.TestingHelpers"
       testing:
         patterns:
-          - "coverlet.collector"
           - "FakeItEasy"
           - "FakeItEasy.*"
+          - "GitHubActionsTestLogger"
           - "Microsoft.NET.Test.Sdk"
           - "Shouldly"
           - "Verify.Xunit"
