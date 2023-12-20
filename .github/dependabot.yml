@@ -15,6 +15,7 @@ updates:
       github-actions:
         patterns:
           - "actions/*"
+          - "github/*"
       my-actions:
         patterns:
           - "xt0rted/*"
