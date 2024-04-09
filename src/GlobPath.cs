@@ -19,11 +19,7 @@ internal class GlobPath
 
     [UnsupportedOSPlatform("windows")]
     [SupportedOSPlatformGuard("windows5.1.2600")]
-#if NETCOREAPP3_1
-    private readonly bool _isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
-#else
     private readonly bool _isWindows = OperatingSystem.IsWindows();
-#endif
 
     private readonly IConsoleWriter _console;
     private readonly IFileProvider _rootDirectory;
@@ -74,12 +70,12 @@ internal class GlobPath
 
                 if (item.IsDirectory)
                 {
-                    var directory = _fileSystem.DirectoryInfo.FromDirectoryName(item.PhysicalPath);
+                    var directory = _fileSystem.DirectoryInfo.New(item.PhysicalPath);
                     RemoveDirectoryInfoItem(directory, preserveRoot, dryRun, cancellationToken);
                 }
                 else
                 {
-                    var file = _fileSystem.FileInfo.FromFileName(item.PhysicalPath);
+                    var file = _fileSystem.FileInfo.New(item.PhysicalPath);
                     RemoveFileSystemItem(file, dryRun);
                 }
 
@@ -116,7 +112,7 @@ internal class GlobPath
     /// <exception cref="IOException" />
     public void RemoveDirectoryInfoItem(IDirectoryInfo directory, bool keepSelf, bool dryRun, CancellationToken cancellationToken)
     {
-        if (directory is null) throw new ArgumentNullException(nameof(directory));
+        ArgumentNullException.ThrowIfNull(directory);
 
         if (IsReparsePointLikeSymlink(directory))
         {

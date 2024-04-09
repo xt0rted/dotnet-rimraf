@@ -36,7 +36,7 @@ internal class RimRafCommand : RootCommand, ICommandHandler
 
     public Task<int> InvokeAsync(InvocationContext context)
     {
-        if (context is null) throw new ArgumentNullException(nameof(context));
+        ArgumentNullException.ThrowIfNull(context);
 
         var verbose = context.ParseResult.GetValueForOption(ToolOptions.Verbose);
         var dryRun = context.ParseResult.GetValueForOption(ToolOptions.DryRun);
