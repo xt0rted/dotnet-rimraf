@@ -18,14 +18,6 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-    <PackageReference Include="Emet.FileSystems" Version="0.0.5" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
-    <PackageReference Include="Emet.FileSystems" Version="0.0.5" />
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="FakeItEasy" Version="7.4.0" />
     <PackageReference Include="FakeItEasy.Analyzer.CSharp" Version="6.1.1">

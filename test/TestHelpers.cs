@@ -41,11 +41,6 @@ internal static class TestHelpers
         }
     }
 
-#if NET6_0_OR_GREATER
     private static void CreateFileSymbolicLink(string path, string pathToTarget)
         => File.CreateSymbolicLink(path, pathToTarget);
-#else
-    private static void CreateFileSymbolicLink(string path, string pathToTarget)
-        => Emet.FileSystems.FileSystem.CreateSymbolicLink(pathToTarget, path, Emet.FileSystems.FileType.File);
-#endif
 }

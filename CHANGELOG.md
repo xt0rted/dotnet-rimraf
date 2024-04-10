@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+### Added
+
+- Added support for .NET 8
+
+### Removed
+
+- Dropped support for .NET Core 3.1
+- Dropped support for .NET 5
+- Dropped support for .NET 6
+
 ### Fixed
 
 - Fixed console color output check

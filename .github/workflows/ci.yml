@@ -52,12 +52,18 @@ jobs:
 
       - name: Set up .NET
         uses: xt0rted/setup-dotnet@v1.5.0
+        if: startsWith(matrix.os, 'macos') == false
+        with:
+          source-url: https://nuget.pkg.github.com/xt0rted/index.json
+          nuget_auth_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up .NET
+        uses: xt0rted/setup-dotnet@v1.5.0
+        if: startsWith(matrix.os, 'macos') == true
         with:
           source-url: https://nuget.pkg.github.com/xt0rted/index.json
           nuget_auth_token: ${{ secrets.GITHUB_TOKEN }}
           dotnet-version: |
-            3.1.x
-            5.0.x
             6.0.x
             8.0.x
 
