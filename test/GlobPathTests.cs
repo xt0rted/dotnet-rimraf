@@ -12,7 +12,6 @@ using Microsoft.Extensions.FileProviders;
 
 using static VerifyConsole;
 
-[UsesVerify]
 public sealed class GlobPathTests : IClassFixture<GlobPathTestEnvironment>, IDisposable
 {
     private readonly FileSystem _fileSystem = new();
