@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [0.2.0](https://github.com/xt0rted/dotnet-rimraf/compare/v0.1.0...v0.2.0) - 2024-04-10
+
 ### Added
 
 - Added support for .NET 8

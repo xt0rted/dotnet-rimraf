@@ -53,9 +53,8 @@ jobs:
           path: ./artifacts/*.nupkg
 
       - name: Upload release assets
-        uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v2.0.4
+        id: release_updater
         with:
           body: ${{ steps.changelog_reader.outputs.changes }}
           files: ./artifacts/*.nupkg
