@@ -63,9 +63,6 @@ jobs:
         with:
           source-url: https://nuget.pkg.github.com/xt0rted/index.json
           nuget_auth_token: ${{ secrets.GITHUB_TOKEN }}
-          dotnet-version: |
-            6.0.x
-            8.0.x
 
       - run: dotnet tool restore
 
