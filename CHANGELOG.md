@@ -18,6 +18,7 @@
 
 ### Updated
 
+- Bumped `Microsoft.Windows.CsWin32` from 0.1.635-beta to 0.3.49-beta
 - Bumped `System.CommandLine` from 2.0.0-beta3.22114.1 to 2.0.0-beta4.22272.1
 - Bumped `System.CommandLine.Rendering` from 0.4.0-alpha.22114.1 to 0.4.0-alpha.22272.1
 - Bumped `System.IO.Abstractions` from 16.1.25 to 21.0.2
