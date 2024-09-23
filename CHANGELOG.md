@@ -5,6 +5,7 @@
 ### Updated
 
 - Build and test on macOS 14
+- Build and test on Ubuntu 24.04
 - No longer built and tested on macOS 11 due to GitHub Actions [no longer supporting](https://github.com/actions/runner-images/issues/9255) that version
 
 ## [0.2.0](https://github.com/xt0rted/dotnet-rimraf/compare/v0.1.0...v0.2.0) - 2024-04-10
