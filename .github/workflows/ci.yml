@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4.2.0
+        uses: actions/checkout@v4.2.1
 
       - name: Build version suffix (main)
         if: github.event_name == 'push'
@@ -74,7 +74,7 @@ jobs:
       - run: dotnet r pack -- --no-build --version-suffix ${{ env.VERSION_SUFFIX }}
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4.4.0
+        uses: actions/upload-artifact@v4.4.1
         if: matrix.os == 'ubuntu-22.04'
         with:
           name: nupkg
@@ -82,7 +82,7 @@ jobs:
 
       - name: Upload test results
         if: failure()
-        uses: actions/upload-artifact@v4.4.0
+        uses: actions/upload-artifact@v4.4.1
         with:
           name: build-verify-test-results
           path: |
