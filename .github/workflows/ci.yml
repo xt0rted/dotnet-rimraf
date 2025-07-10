@@ -76,7 +76,7 @@ jobs:
       - run: dotnet r pack -- --no-build --version-suffix ${{ env.VERSION_SUFFIX }}
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4.4.3
+        uses: actions/upload-artifact@v4.6.2
         if: matrix.os == 'ubuntu-24.04'
         with:
           name: nupkg
@@ -84,7 +84,7 @@ jobs:
 
       - name: Upload test results
         if: failure()
-        uses: actions/upload-artifact@v4.4.3
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: build-verify-test-results
           path: |
@@ -102,7 +102,7 @@ jobs:
 
     steps:
       - name: Download nupkg
-        uses: actions/download-artifact@v4.1.8
+        uses: actions/download-artifact@v4.3.0
         with:
           name: nupkg
 
