@@ -11,6 +11,7 @@
 - Build and test on Ubuntu 24.04 ARM
 - Build and test on Windows 2025
 - No longer built and tested on macOS 11 & 12 due to GitHub Actions [no longer supporting](https://github.com/actions/runner-images/issues/9255) those versions
+- No longer built and tested on Windows 2019 due to GitHub Actions no longer supporting this version
 
 ## [0.2.0](https://github.com/xt0rted/dotnet-rimraf/compare/v0.1.0...v0.2.0) - 2024-04-10
 
