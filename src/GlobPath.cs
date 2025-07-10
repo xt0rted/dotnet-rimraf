@@ -54,6 +54,13 @@ internal class GlobPath
                 return;
             }
 
+            if (string.IsNullOrEmpty(item.PhysicalPath))
+            {
+                _console.SecondaryLine("{0} is not accessible", item.IsDirectory ? "Directory" : "File");
+
+                continue;
+            }
+
             if (!item.Exists)
             {
                 _console.SecondaryLine("{0} doesn't exist", item.IsDirectory ? "Directory" : "File");
@@ -71,11 +78,13 @@ internal class GlobPath
                 if (item.IsDirectory)
                 {
                     var directory = _fileSystem.DirectoryInfo.New(item.PhysicalPath);
+
                     RemoveDirectoryInfoItem(directory, preserveRoot, dryRun, cancellationToken);
                 }
                 else
                 {
                     var file = _fileSystem.FileInfo.New(item.PhysicalPath);
+
                     RemoveFileSystemItem(file, dryRun);
                 }
 
