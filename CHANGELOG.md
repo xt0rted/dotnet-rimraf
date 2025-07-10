@@ -9,6 +9,7 @@
 - Build and test on Ubuntu 22.04 ARM
 - Build and test on Ubuntu 24.04
 - Build and test on Ubuntu 24.04 ARM
+- Build and test on Windows 11 ARM
 - Build and test on Windows 2025
 - No longer built and tested on macOS 11 & 12 due to GitHub Actions [no longer supporting](https://github.com/actions/runner-images/issues/9255) those versions
 - No longer built and tested on Ubuntu 20.04 due to GitHub Actions no longer supporting this version
