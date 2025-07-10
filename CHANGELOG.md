@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [0.3.1](https://github.com/xt0rted/dotnet-rimraf/compare/v0.3.0...v0.3.1) - 2025-07-10
+
 ### Fixed
 
 - Fix null reference when file or directory is not accessible
