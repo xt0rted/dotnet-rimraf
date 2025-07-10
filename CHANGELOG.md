@@ -21,6 +21,7 @@
 ### Updated
 
 - Bumped `Microsoft.Windows.CsWin32` from 0.3.49-beta to 0.3.183
+- Bumped `System.IO.Abstractions` from 21.0.2 to 22.0.15
 
 ## [0.2.0](https://github.com/xt0rted/dotnet-rimraf/compare/v0.1.0...v0.2.0) - 2024-04-10
 
