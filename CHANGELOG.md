@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [0.3.0](https://github.com/xt0rted/dotnet-rimraf/compare/v0.2.0...v0.3.0) - 2025-07-10
+
 ### Added
 
 - Build and test on macOS 14
