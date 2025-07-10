@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-### Updated
+### Added
 
 - Build and test on macOS 14
 - Build and test on macOS 15
@@ -11,9 +11,16 @@
 - Build and test on Ubuntu 24.04 ARM
 - Build and test on Windows 11 ARM
 - Build and test on Windows 2025
+
+### Removed
+
 - No longer built and tested on macOS 11 & 12 due to GitHub Actions [no longer supporting](https://github.com/actions/runner-images/issues/9255) those versions
 - No longer built and tested on Ubuntu 20.04 due to GitHub Actions no longer supporting this version
 - No longer built and tested on Windows 2019 due to GitHub Actions no longer supporting this version
+
+### Updated
+
+- Bumped `Microsoft.Windows.CsWin32` from 0.3.49-beta to 0.3.183
 
 ## [0.2.0](https://github.com/xt0rted/dotnet-rimraf/compare/v0.1.0...v0.2.0) - 2024-04-10
 
